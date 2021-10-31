@@ -229,6 +229,7 @@ GameObject:
   - component: {fileID: 689351511}
   - component: {fileID: 689351510}
   - component: {fileID: 689351512}
+  - component: {fileID: 689351513}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
@@ -284,6 +285,19 @@ MonoBehaviour:
   _rollMult: -45
   _pichMult: 30
   _shialdLevel: 1
+--- !u!114 &689351513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689351509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ae118da8b08c4265b6bb71de3d5d968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _radius: 4
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,6 +517,7 @@ GameObject:
   - component: {fileID: 1874111664}
   - component: {fileID: 1874111663}
   - component: {fileID: 1874111662}
+  - component: {fileID: 1874111665}
   m_Layer: 0
   m_Name: Shieild
   m_TagString: Untagged
@@ -586,3 +601,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874111660}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1874111665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874111660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65957ec1aef9b444e89085111e3200f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rotationsSecond: 0.1
+  _levelShown: 0
