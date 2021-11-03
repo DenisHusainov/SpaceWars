@@ -80,6 +80,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _radius: -2.5
+  _keepOnScreen: 0
+  _isOnScreen: 1
 --- !u!1 &6881714421310840030
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,11 +8,13 @@ using UnityEngine;
 public class BoundsCheck : MonoBehaviour
 {
     [Header("Set in Inspector")]
-    [SerializeField] private float _radius = 1f;
+     public float _radius = 1f;
+    [SerializeField] private bool _keepOnScreen = true;
 
     [Header("Set Dinamically")]
-     private float _cammeraWidth = default;
-     private float _cammeraHight = default;
+     public float _cammeraWidth = default;
+     public float _cammeraHight = default;
+     public bool _isOnScreen = true;
 
     private void Awake()
     {
@@ -23,19 +25,38 @@ public class BoundsCheck : MonoBehaviour
     private void LateUpdate()
     {
         Vector3 _pos = transform.position;
-        if (_pos.x > _cammeraWidth - _radius)
+        if (_pos.x > _cammeraWidth - _radius) {
             _pos.x = _cammeraWidth - _radius;
+            _isOnScreen = false;
+        }
+         
 
         if (_pos.x < -_cammeraWidth + _radius)
+        {
             _pos.x = -_cammeraWidth + _radius;
+            _isOnScreen = false;
+        }
+           
 
         if (_pos.y > _cammeraHight - _radius)
+        {
             _pos.y = _cammeraHight - _radius;
+            _isOnScreen = false;
+        }
+            
 
         if (_pos.y < -_cammeraHight + _radius)
+        {
             _pos.y = -_cammeraHight + _radius;
+            _isOnScreen = false;
+        }
 
-        transform.position = _pos;
+        if (_isOnScreen && !_keepOnScreen)
+        {
+            transform.position = _pos;
+            _isOnScreen = true;
+        }
+        
     }
 
     private void OnDrawGizmos()
