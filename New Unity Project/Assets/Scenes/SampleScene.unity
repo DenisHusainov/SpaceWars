@@ -298,6 +298,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _radius: 4
+  _keepOnScreen: 1
+  _cammeraWidth: 0
+  _cammeraHight: 0
+  _isOnScreen: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,6 +677,10 @@ PrefabInstance:
     - target: {fileID: 8628344769903698452, guid: bfe29d5c4fd04437396dbcb0daf015d5, type: 3}
       propertyPath: _radius
       value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8628344769903698452, guid: bfe29d5c4fd04437396dbcb0daf015d5, type: 3}
+      propertyPath: _keepOnScreen
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfe29d5c4fd04437396dbcb0daf015d5, type: 3}
